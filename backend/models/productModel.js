@@ -7,15 +7,15 @@ const reviewSchema = mongoose.Schema({
         ref:'User',
     },
     name:{
-        type: 'string',
+        type:String,
         required:true,
     },
     rating:{
-        type: 'number',
+        type:Number,
         required:true,
     },
-    Comment:{
-        type: 'String',
+    comment:{
+        type:String,
         required:true,
     },
 },{
