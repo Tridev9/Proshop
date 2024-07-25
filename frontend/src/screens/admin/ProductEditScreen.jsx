@@ -77,7 +77,7 @@ const ProductEditScreen = () => {
         <Link to='/admin/productlist' className='btn btn-light my-3' >Go Back</Link>
         <FormContainer>
             <h1>Edit Product</h1>
-            {loadingUpload && <Loader />}
+            
             {loadingUpdate && <Loader/>}
             {isLoading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> : (
                 <Form onSubmit={submitHandler}>
@@ -93,7 +93,7 @@ const ProductEditScreen = () => {
                         <Form.Label>Image</Form.Label>
                         <Form.Control type='text' placeholder='Enter image URL' value={image} onChange={(e) => setImage}></Form.Control>
                         <Form.Control type='file' Label='Choose file' onChange={uploadFileHandler}></Form.Control>
-                    </Form.Group>
+                    </Form.Group>{loadingUpload && <Loader />}
                     <Form.Group controlId='brand' className='my-2'>
                         <Form.Label>Brand</Form.Label>
                         <Form.Control type='text' placeholder='Enter brand' value={brand} onChange={(e) => setBrand(e.target.value)} />
