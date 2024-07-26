@@ -62,7 +62,7 @@ const UseEditScreen = () => {
                         <Form.Check type='checkbox' label='Is Admin' checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
                     </Form.Group>
                     <Button type='submit' variant='primary'  className='my-2'>
-                        Update Product
+                        Update User
                     </Button>
                 </Form>
             )}
