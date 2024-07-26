@@ -7,6 +7,7 @@ import {useLogoutMutation} from '../slices/usersApiSlice.js';
 import {logout} from '../slices/authSlice.js'
 import SearchBox from './SearchBox.jsx';
 import logo from '../assets/logo.png';
+import {resetCart} from '../slices/cartSlice.js'
 
 
 const Header = () => {
@@ -21,6 +22,7 @@ const Header = () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
+      dispatch(resetCart());
       navigate('/login');
     } catch (error) {
       console.log(error);
