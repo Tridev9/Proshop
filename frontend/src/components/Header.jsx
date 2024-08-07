@@ -6,7 +6,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import {useLogoutMutation} from '../slices/usersApiSlice.js';
 import {logout} from '../slices/authSlice.js'
 import SearchBox from './SearchBox.jsx';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo1.png';
 import {resetCart} from '../slices/cartSlice.js'
 
 
